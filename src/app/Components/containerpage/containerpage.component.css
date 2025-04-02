@@ -1,0 +1,9 @@
+.containerPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerPage__container {
+    min-height: 85vh;
+    padding-inline: 4px;
+}
