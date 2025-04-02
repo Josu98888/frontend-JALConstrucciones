@@ -1,0 +1,9 @@
+.aboutUs {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutUs__text {
+    text-align: center;
+}

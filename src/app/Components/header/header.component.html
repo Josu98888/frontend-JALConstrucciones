@@ -16,9 +16,9 @@
     <!-- ------------------------------------------- TogleMenu Mobile ----------------------------- -->
     <div class="header__togleMenu" [ngClass]="{'open': menuItems}">
         <ul class="header__togleMenu__containerLinks">
-            <li class="header__togleMenu__links">Home</li>
+            <li class="header__togleMenu__links" [routerLink]="['']">Home</li>
             <li class="header__togleMenu__links">Servicios</li>
-            <li class="header__togleMenu__links">Sobre Nosotros</li>
+            <li class="header__togleMenu__links" [routerLink]="['/aboutUs']" >Sobre Nosotros</li>
             <li class="header__togleMenu__links">Contacto</li>
         </ul>
         <button class="header__togleMenu__btnClose" (click)="togleMenu()">
