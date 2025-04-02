@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+/*  ------------------- Left ----------------- */
+.footer__containerLogoJal {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.footer__logo {
+    width: 150px;
+}
+.footer__text {
+    font-size: 10px;
+}
+/*  ------------------- Right ----------------- */
+.footer__containerLogoJs {
+    display: flex;
+    gap: 2px;
+}
+.footer__logoJs {
+    width: 30px;
+}
