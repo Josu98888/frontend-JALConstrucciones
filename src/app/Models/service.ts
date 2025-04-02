@@ -5,5 +5,6 @@ export class Service {
         public category_id:number,
         public name:string,
         public description:string,
+        public outstanding:boolean
     ) {}
 }
