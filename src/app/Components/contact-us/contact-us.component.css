@@ -1,0 +1,43 @@
+.contactUs {
+    padding: 10px;
+}
+/*  ------------------------ Top --------------------------- */
+.Contactanos__title {
+    text-align: center;
+}
+/*  ------------------------ Top --------------------------- */
+.contactUs__form {
+    padding: 10px;
+    padding-inline: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+}
+.contactUs__containerInput {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ .contactUs__form , .contactUs__btn{
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 8px;
+    filter: drop-shadow(2px 2px 2px rgb(12, 245, 12));
+    color: blue;
+    text-align: center;
+}
+.contactUs__input  {
+    height: 20px;
+    border-radius: 8px;
+}
+.contactUs__textarea {
+    height: 65px;
+    border-radius: 8px;
+}
+.contactUs__btn {
+    padding: 10px;
+}
