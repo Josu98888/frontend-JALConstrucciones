@@ -1,0 +1,76 @@
+/*  ------------------------------------------- Mobile ------------------------------------------------ */
+@media (min-width:0) {
+.header {
+    width: 98%;
+    height: 70px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid green;
+  }
+  /* -------------------------------------------- left ---------------------------------- */
+  .header__containerMenu {
+    align-self: center;
+    cursor: pointer;
+    margin: 2px;
+  }
+  .header__BtnMenu, .header__togleMenu__btnClose {
+      border: 2px solid green;
+      border-bottom: 2px solid blue;
+      border-right: 2px solid blue;
+      border-radius: 8px;
+      background-color: white;
+      filter: drop-shadow(2px 2px 2px rgb(12, 245, 12));
+  }
+  /* -------------------------------------------- Right ---------------------------------- */
+  .header__containerLogo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .header__logo {
+    object-fit: cover;
+  }
+  /* ---------------- TogleMenu ------------- */
+  .header__togleMenu {
+    min-width: 97%;
+    box-sizing: border-box;
+    background-color: white;
+    color: green;
+    border-bottom: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    padding: 2px;
+    overflow: hidden;
+    top: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  .header__togleMenu.open {
+    max-height: 150px;
+    opacity: 1;
+  }
+  /* ---------------- left ------------- */
+  .header__togleMenu__containerLinks {
+    padding-inline: 10px;
+  }
+  .header__togleMenu__links {
+    list-style: none;
+    font-size: 20px;
+    border-bottom: 4px solid white;
+  }
+  .header__togleMenu__links:hover {
+    border-bottom: 4px solid blue;
+  }
+  /* ---------------- right ------------- */
+  .header__togleMenu__btnClose {
+      width: 40px;
+      height: 40px;
+      align-self:flex-start;
+  }
+}
+/*  ------------------------------------------- Tablet ------------------------------------------------ */
+
