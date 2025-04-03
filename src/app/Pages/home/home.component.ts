@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { OutstandingComponent } from '../../Components/outstanding/outstanding.component';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [OutstandingComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
