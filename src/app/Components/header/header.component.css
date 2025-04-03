@@ -42,6 +42,7 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
+    z-index: 1000;
     padding: 2px;
     overflow: hidden;
     top: 0;
@@ -50,7 +51,7 @@
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   }
   .header__togleMenu.open {
-    max-height: 150px;
+    max-height: 100%;
     opacity: 1;
   }
   /* ---------------- left ------------- */
@@ -64,6 +65,13 @@
   }
   .header__togleMenu__links:hover {
     border-bottom: 4px solid blue;
+  }
+  .header__togleMenu__categories.open {
+    display: block;
+    
+  }
+  .header__togleMenu__categories {
+    display: none;
   }
   /* ---------------- right ------------- */
   .header__togleMenu__btnClose {
