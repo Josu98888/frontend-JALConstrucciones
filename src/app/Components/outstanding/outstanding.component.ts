@@ -2,10 +2,11 @@ import { Component , OnInit} from '@angular/core';
 import { Service } from '../../services/serviceService';
 import { NgFor } from '@angular/common';
 import { environment } from '../../../environments/environment.development';
+import { CardServiceComponent } from '../../MicroComponents/card-service/card-service.component';
 
 @Component({
   selector: 'app-outstanding',
-  imports: [NgFor],
+  imports: [NgFor, CardServiceComponent],
   templateUrl: './outstanding.component.html',
   styleUrl: './outstanding.component.css'
 })

@@ -1,3 +1,5 @@
 <section>
-    
+    <div *ngFor="let service of outstanding">
+        <app-card-service [service]="service" [images]="service.images" [url]="url"></app-card-service>
+    </div>
 </section>

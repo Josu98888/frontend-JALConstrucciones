@@ -1,0 +1,32 @@
+.cardService {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4px;
+    min-width: 300px;
+    min-height: 386px;
+}
+.cardService__container {
+    width: 100%;
+}
+.cardService, .cardService__title, .cardService__parr { 
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 5px rgba(179, 224, 187, 0.5));
+}
+.cardService__img {
+    width: 100%;
+    height: 300px;
+    object-fit: fill;
+}
+.cardService__containerText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cardService__title {
+    padding-inline: 2px;
+}
