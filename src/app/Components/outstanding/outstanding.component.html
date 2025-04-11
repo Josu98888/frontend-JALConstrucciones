@@ -1,5 +1,9 @@
-<section>
-    <div *ngFor="let service of outstanding">
-        <app-card-service [service]="service" [images]="service.images" [url]="url"></app-card-service>
-    </div>
+<section class="outstanding" >
+        <app-myslider >
+            <app-card-service *ngFor="let service of outstanding"
+            #slideItem
+            [service]="service"
+            [images]="service.images"
+            [url]="url"></app-card-service>
+        </app-myslider>
 </section>

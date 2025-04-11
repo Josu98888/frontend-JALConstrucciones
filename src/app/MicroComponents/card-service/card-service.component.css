@@ -3,8 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding: 4px;
-    min-width: 300px;
-    min-height: 386px;
+    width: 100%;
 }
 .cardService__container {
     width: 100%;
@@ -20,7 +19,7 @@
 .cardService__img {
     width: 100%;
     height: 300px;
-    object-fit: fill;
+    object-fit:fill;
 }
 .cardService__containerText {
     display: flex;

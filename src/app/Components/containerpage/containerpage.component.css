@@ -1,9 +1,7 @@
-.containerPage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.page{
+    width: 100vh;
+    min-height: 145vh;
 }
-.containerPage__container {
-    min-height: 85vh;
-    padding-inline: 4px;
+.page__container {
+    padding: 8px;
 }

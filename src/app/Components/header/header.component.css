@@ -1,7 +1,7 @@
 /*  ------------------------------------------- Mobile ------------------------------------------------ */
 @media (min-width:0) {
 .header {
-    width: 98%;
+    min-width: 100vh;
     height: 70px;
     box-sizing: border-box;
     display: flex;
@@ -34,7 +34,7 @@
   }
   /* ---------------- TogleMenu ------------- */
   .header__togleMenu {
-    min-width: 97%;
+    width: 100vh;
     box-sizing: border-box;
     background-color: white;
     color: green;

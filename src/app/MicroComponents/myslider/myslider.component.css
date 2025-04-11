@@ -1,0 +1,45 @@
+
+@media (min-width: 0) {
+    .slider {
+        display: flex;
+  }
+.slider__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+.slider__track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.slider__track ::ng-deep > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    align-self: stretch;
+}
+.slider__containerBtn {
+    width: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+.slider__btn {
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 5px rgba(179, 224, 187, 0.5));
+    margin-inline: 30px;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+}
+
+}
+
