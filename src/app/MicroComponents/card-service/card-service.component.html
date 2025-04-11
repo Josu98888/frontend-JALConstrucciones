@@ -8,5 +8,8 @@
         <div class="cardService__containerText">
             <h2 class="cardService__title">{{service.name}}</h2>
         </div>
+        <div class="cardService__containerDescription" *ngIf="description">
+            <p class="cardService__description">{{service.description}}</p>
+        </div>
     </div>
 </article>

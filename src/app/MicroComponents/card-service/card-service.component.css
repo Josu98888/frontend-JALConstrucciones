@@ -8,13 +8,13 @@
 .cardService__container {
     width: 100%;
 }
-.cardService, .cardService__title, .cardService__parr { 
+.cardService, .cardService__title, .cardService__parr, .cardService__containerDescription { 
     border-top: 2px solid green;
     border-left: 2px solid green;
     border-bottom: 2px solid blue;
     border-right: 2px solid blue;
     border-radius: 8px;
-    filter: drop-shadow(0 0 5px rgba(179, 224, 187, 0.5));
+    filter: drop-shadow(0 0 5px rgb(110, 170, 226));
 }
 .cardService__img {
     width: 100%;
@@ -28,4 +28,12 @@
 }
 .cardService__title {
     padding-inline: 2px;
+}
+.cardService__containerDescription {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(179, 176, 176);
+}
+.cardService__description {
+    font-size: 16px;
 }

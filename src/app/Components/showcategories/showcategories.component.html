@@ -5,7 +5,7 @@
     <div>
         <app-myslider>
             <app-card-service *ngFor="let category of categories" #slideItem [service]="category"
-                [image]="category.image" [url]="url+'category/getImage/'"></app-card-service>
+                [image]="category.image" [url]="url+'category/getImage/'" [description]="true"></app-card-service>
         </app-myslider>
     </div>
 
