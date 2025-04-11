@@ -1,15 +1,15 @@
 import { NgFor } from '@angular/common';
-import { Component, ElementRef, ViewChild} from '@angular/core';
+import { Component, ContentChildren, ElementRef, QueryList, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-myslider',
-  imports: [NgFor],
+  imports: [],
   templateUrl: './myslider.component.html',
   styleUrl: './myslider.component.css'
 })
 export class MysliderComponent {
   @ViewChild('slider', { static: true }) slider!: ElementRef;
-  list:number[] = [1,2,3,4,5,6,7,10];
+  @ContentChildren('slideItem') slideItems!: QueryList<ElementRef>;
   currentIndex: number = 0;
   interval:number = 0;
   dots:boolean = false;
@@ -22,8 +22,13 @@ export class MysliderComponent {
     this.slider.nativeElement.style.transform = `translateX(-${this.currentIndex * 100}%)`;
   }
 
+  prev() {
+    this.currentIndex = (this.currentIndex - 1 + this.slideItems.length ) % this.slideItems.length;
+    this.updateSlider();
+  }
+
   next() {
-    this.currentIndex = (this.currentIndex + 1) % this.list.length;
+    this.currentIndex = (this.currentIndex + 1) % this.slideItems.length;
     this.updateSlider();
   }
 }

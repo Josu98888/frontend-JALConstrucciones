@@ -4,7 +4,7 @@
             <ng-content></ng-content>
         </div>
         <div class="slider__containerBtn">
-            <button class="slider__btn"><img src="icons/caret-left.svg" alt=""></button>
+            <button class="slider__btn" (click)="prev()"><img src="icons/caret-left.svg" alt=""></button>
             <button class="slider__btn" (click)="next()"><img src="icons/caret-right.svg" alt=""></button>
         </div>
     </div>
