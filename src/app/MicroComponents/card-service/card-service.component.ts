@@ -9,7 +9,7 @@ import { Image } from '../../Models/image';
   styleUrl: './card-service.component.css'
 })
 export class CardServiceComponent {
-  @Input() service!:Service;
-  @Input() images!:Image[];
+  @Input() service:any;
+  @Input() image:any;
   @Input() url!:string;
 }

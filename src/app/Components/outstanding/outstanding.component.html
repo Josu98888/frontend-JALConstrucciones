@@ -6,7 +6,7 @@
             <app-card-service *ngFor="let service of outstanding"
             #slideItem
             [service]="service"
-            [images]="service.images"
-            [url]="url"></app-card-service>
+            [image]="service.images[0]?.url"
+            [url]="url+'image/'"></app-card-service>
         </app-myslider>
 </section>

@@ -1,7 +1,10 @@
 .page{
     width: 100vh;
+    overflow: hidden;
     min-height: 145vh;
 }
 .page__container {
     padding: 8px;
+    display: flex;
+    justify-content:flex-end;
 }

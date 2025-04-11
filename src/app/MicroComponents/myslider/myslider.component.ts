@@ -19,8 +19,10 @@ export class MysliderComponent {
   }
 
   updateSlider() {
-    this.slider.nativeElement.style.transform = `translateX(-${this.currentIndex * 100}%)`;
-  }
+    if (this.slider?.nativeElement) {
+      this.slider.nativeElement.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+    }
+  }  
 
   prev() {
     this.currentIndex = (this.currentIndex - 1 + this.slideItems.length ) % this.slideItems.length;
