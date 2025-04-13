@@ -2,6 +2,8 @@ import { CommonModule, NgClass, NgFor } from '@angular/common';                 
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';                              //para  navegar entre rutas sin recargar la página.
 import { CategoryService } from '../../services/categoryService';           // Servicio de la categoria
+import { Router } from '@angular/router';                                //para navegar entre rutas sin recargar la página.
+import { ViewportScroller } from '@angular/common';                //para desplazarse a una posición específica en la página.
 
 @Component({
   selector: 'app-header',
@@ -17,13 +19,23 @@ export class HeaderComponent {
   public menuCategories:boolean = false;
 
   constructor(
-    private _categoryService:CategoryService
+    private _categoryService:CategoryService,
+    private _router:Router,
+    private _viewportScroller:ViewportScroller
   ) {
     this.categories = this.getCategories();
   }
 
   togleMenu() {
     this.menuItems = !this.menuItems;
+  }
+
+  goToContact() {
+    this._router.navigate([''], { fragment: 'contactUs' }).then(() => {
+      setTimeout(() => {
+        this._viewportScroller.scrollToAnchor('contactUs');
+      }, 0);
+    });
   }
 
   togleCategories() {

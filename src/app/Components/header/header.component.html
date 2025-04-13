@@ -24,7 +24,7 @@
                 </ul>
             </li>
             <li class="header__togleMenu__links" [routerLink]="['/aboutUs']" >Sobre Nosotros</li>
-            <li class="header__togleMenu__links" [routerLink]="['/contactUs']">Contacto</li>
+            <li class="header__togleMenu__links" (click)="goToContact()">Contacto</li>
         </ul>
         <button class="header__togleMenu__btnClose" (click)="togleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16" color="green">
