@@ -1,6 +1,5 @@
 .whychooseus {
     width: 100vh;
-
 }
 .whychooseus__content {
     margin-top:15px ;
@@ -23,12 +22,13 @@
     border-bottom: 2px solid blue;
     border-right: 2px solid blue;
     border-radius: 8px;
-    filter: drop-shadow(0 0 5px rgb(110, 170, 226));
 }
 .whychooseus__title, .whychooseus__par {
     text-align: center;
 }
 .whychooseus__par {
-    background-color: rgb(179, 176, 176);
+    /* background-color: rgb(179, 176, 176); */
+    color: green;
+    font-weight: 700;
     margin: 5px;
 }

@@ -1,0 +1,7 @@
+<div class="servicesByCategory" >
+            <app-card-service *ngFor="let service of services"
+            #slideItem
+            [service]="service"
+            [image]="service.images[0]?.url"
+            [url]="url+'image/'"></app-card-service>
+</div>

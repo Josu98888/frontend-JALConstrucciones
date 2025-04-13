@@ -20,7 +20,7 @@
             <li class="header__togleMenu__links" (click)="togleCategories()">
                 <a class="header__togleMenu__links">Servicios</a>
                 <ul class="header__togleMenu__categories" [ngClass]="{'open': menuCategories}" *ngFor="let category of categories">
-                    <li class="header__togleMenu__links">{{category.name}}</li>
+                    <li class="header__togleMenu__links" [routerLink]="['/services/', category.id]">{{category.name}}</li>
                 </ul>
             </li>
             <li class="header__togleMenu__links" [routerLink]="['/aboutUs']" >Sobre Nosotros</li>
