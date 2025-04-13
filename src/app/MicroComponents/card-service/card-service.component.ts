@@ -1,6 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Service } from '../../Models/service';
-import { Image } from '../../Models/image';
 import { NgIf } from '@angular/common';
 
 @Component({

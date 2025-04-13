@@ -5,10 +5,11 @@ import { environment } from '../../../environments/environment.development';
 import { CategoryService } from '../../services/categoryService';
 import { CardServiceComponent } from '../../MicroComponents/card-service/card-service.component';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-showcategories',
-  imports: [MysliderComponent, CardServiceComponent, NgFor],
+  imports: [MysliderComponent, CardServiceComponent, NgFor, RouterLink],
   templateUrl: './showcategories.component.html',
   styleUrl: './showcategories.component.css'
 })
