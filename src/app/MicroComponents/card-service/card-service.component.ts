@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
+import { TitleComponent } from '../title/title.component';
 
 @Component({
   selector: 'app-card-service',
-  imports: [NgIf],
+  imports: [NgIf, TitleComponent],
   templateUrl: './card-service.component.html',
   styleUrl: './card-service.component.css'
 })

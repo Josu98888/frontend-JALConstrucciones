@@ -8,7 +8,7 @@
         </div>
         <!-- bottom text -->
         <div class="cardServiceDetail__containerText" *ngIf="service">
-            <h2 class="cardServiceDetail__title">{{service.name}}</h2>
+            <app-title [title]="service.name" [h]="'h2'"></app-title>
         </div>
         <div class="cardServiceDetail__containerDescription" *ngIf="service">
             <p class="cardServiceDetail__description">{{service.description}}</p>

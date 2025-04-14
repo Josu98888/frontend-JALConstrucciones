@@ -5,10 +5,11 @@ import { CardServiceComponent } from '../../MicroComponents/card-service/card-se
 import { environment } from '../../../environments/environment.development';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TitleComponent } from '../../MicroComponents/title/title.component';
 
 @Component({
   selector: 'app-servicesbycategory',
-  imports: [CardServiceComponent, NgFor, RouterLink],
+  imports: [CardServiceComponent, NgFor, RouterLink, TitleComponent],
   templateUrl: './servicesbycategory.component.html',
   styleUrl: './servicesbycategory.component.css'
 })

@@ -6,7 +6,7 @@
         </div>
         <!-- bottom text -->
         <div class="cardService__containerText">
-            <h2 class="cardService__title">{{service.name}}</h2>
+            <app-title [title]="service.name" [h]="'h2'"></app-title>
         </div>
         <div class="cardService__containerDescription" *ngIf="description">
             <p class="cardService__description">{{service.description}}</p>

@@ -1,6 +1,6 @@
 <div class="servicesByCategory" >
     <div class="servicesByCategory__container">
-        <h1 class="servicesByCategory__title">{{title}}</h1>
+        <app-title [title]="title" [h]="'h1'"></app-title>
     </div>
     <div class="servicesByCategory__container">
         <app-card-service *ngFor="let service of services"

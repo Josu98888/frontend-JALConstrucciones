@@ -3,6 +3,7 @@
     justify-content: center;
 }
 .title__h {
+    text-align: center;
     background: radial-gradient(rgb(0, 250, 0), rgb(22, 29, 26));
     font-weight: 800;
     font-family:system-ui;

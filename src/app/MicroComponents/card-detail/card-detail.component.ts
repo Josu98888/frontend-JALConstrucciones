@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { MysliderComponent } from '../myslider/myslider.component';
 import { NgFor, NgIf } from '@angular/common';
+import { TitleComponent } from '../title/title.component';
 
 @Component({
   selector: 'app-card-detail',
-  imports: [MysliderComponent, NgFor, NgIf],
+  imports: [MysliderComponent, NgFor, NgIf, TitleComponent],
   templateUrl: './card-detail.component.html',
   styleUrl: './card-detail.component.css'
 })

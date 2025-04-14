@@ -3,10 +3,11 @@ import { environment } from '../../../environments/environment.development';
 import { Service } from '../../services/serviceService';
 import { ActivatedRoute } from '@angular/router';
 import { CardDetailComponent } from "../../MicroComponents/card-detail/card-detail.component";
+import { TitleComponent } from '../../MicroComponents/title/title.component';
 
 @Component({
   selector: 'app-service-detail',
-  imports: [ CardDetailComponent],
+  imports: [ CardDetailComponent, TitleComponent],
   templateUrl: './service-detail.component.html',
   styleUrl: './service-detail.component.css'
 })
