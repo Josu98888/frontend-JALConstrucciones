@@ -26,4 +26,10 @@ export class Service {
 
         return this._http.get(this.url + 'services/getServicesByCategory/' + id, {headers: headers});
     }
+
+    getService(id:any):Observable <any> {
+        let headers = new HttpHeaders();
+
+        return this._http.get(this.url + 'service/' + id, {headers: headers});
+    }
 }

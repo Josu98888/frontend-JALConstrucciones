@@ -1,0 +1,17 @@
+<article class="cardServiceDetail">
+    <div class="cardServiceDetail__container">
+        <!-- top immage -->
+        <div class="cardServiceDetail__containerImg">
+            <app-myslider>
+                  <img *ngFor="let image of images" #slideItem class="cardServiceDetail__img" [src]="url + image.url" alt="image">
+              </app-myslider>
+        </div>
+        <!-- bottom text -->
+        <div class="cardServiceDetail__containerText" *ngIf="service">
+            <h2 class="cardServiceDetail__title">{{service.name}}</h2>
+        </div>
+        <div class="cardServiceDetail__containerDescription" *ngIf="service">
+            <p class="cardServiceDetail__description">{{service.description}}</p>
+        </div>
+    </div>
+</article>
