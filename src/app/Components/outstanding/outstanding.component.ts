@@ -5,10 +5,11 @@ import { CardServiceComponent } from '../../MicroComponents/card-service/card-se
 import { NgFor } from '@angular/common';
 import { MysliderComponent } from '../../MicroComponents/myslider/myslider.component';
 import { RouterLink } from '@angular/router';
+import { TitleComponent } from '../../MicroComponents/title/title.component';
 
 @Component({
   selector: 'app-outstanding',
-  imports: [NgFor, CardServiceComponent, MysliderComponent, RouterLink],
+  imports: [NgFor, CardServiceComponent, MysliderComponent, RouterLink, TitleComponent],
   templateUrl: './outstanding.component.html',
   styleUrl: './outstanding.component.css'
 })
