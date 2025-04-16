@@ -18,6 +18,11 @@
 .footer__logo {
     width: 150px;
 }
+.footer_link {
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}
 .footer__text {
     font-size: 10px;
 }
