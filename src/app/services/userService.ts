@@ -2,15 +2,6 @@ import { Injectable } from "@angular/core";                                     
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";                   //para las solicitudes Http
 import { catchError, Observable, throwError } from "rxjs";                                           //para las respuestas de las solicitudes
 import { environment } from "../../environments/environment.development";                            //la url del backend
-
-interface User {
-    id: number;
-    firstName: string;
-    lastName: string;
-    email: string;
-    password: string;
-    getToken?: string;  // Opcional si es necesario.
-}
   
 @Injectable({
     providedIn: 'root'                                                                               // ✅ Esto hace que Angular lo pueda inyectar sin providers extras
@@ -50,6 +41,16 @@ export class UserService {
         this.token = token;
         localStorage.setItem('identity', JSON.stringify(identity));
         localStorage.setItem('token', token);
+    }
+
+    getIdentity(): Observable<any> {
+        let identity = JSON.parse(localStorage.getItem('identity') || '{}');
+        if (identity && identity != 'undefined') {
+          this.identity = identity;
+        } else {
+          this.identity = null;
+        }
+        return this.identity;
       }
     
 }

@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';                              //par
 import { CategoryService } from '../../services/categoryService';           // Servicio de la categoria
 import { Router } from '@angular/router';                                //para navegar entre rutas sin recargar la página.
 import { ViewportScroller } from '@angular/common';                //para desplazarse a una posición específica en la página.
+import { UserService } from '../../services/userService';
 
 @Component({
   selector: 'app-header',
@@ -22,9 +23,11 @@ export class HeaderComponent {
   constructor(
     private _categoryService:CategoryService,
     private _router:Router,
-    private _viewportScroller:ViewportScroller
+    private _viewportScroller:ViewportScroller,
+    private _userService:UserService
   ) {
     this.categories = this.getCategories();
+    this.identity = this._userService.getIdentity();
   }
 
   togleMenu() {
@@ -57,4 +60,5 @@ export class HeaderComponent {
       }
     );
   }
+
 }
