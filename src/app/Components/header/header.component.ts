@@ -17,6 +17,7 @@ export class HeaderComponent {
   public status!:string;
   public menuItems:boolean = false;
   public menuCategories:boolean = false;
+  public identity:any;
 
   constructor(
     private _categoryService:CategoryService,
