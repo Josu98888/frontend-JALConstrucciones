@@ -40,10 +40,7 @@
     height: 20px;
     border-radius: 8px;
 }
-.login__textarea {
-    height: 65px;
-    border-radius: 8px;
-}
+
 .login__btn {
     padding: 10px;
     color: blue;

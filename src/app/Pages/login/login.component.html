@@ -1,18 +1,18 @@
 <div class="login">
     <app-title [title]="'Ingreso'" [h]="'h1'"></app-title>
-    <form class="login__form">
+    <form class="login__form" [formGroup]="loginForm">
         <div class="login__containerInput">
             <label class="login__label">email</label>
-            <input class="login__input" type="email" placeholder="Email">
+            <input class="login__input" type="email" placeholder="Email" formControlName="email">
             <div class="login__containerMsjError"></div>
         </div>
         <div class="login__containerInput">
             <label class="login__label">contraseña</label>
-            <input class="login__input" type="password" placeholder="contraseña">
+            <input class="login__input" type="password" placeholder="contraseña" formControlName="password">
             <div class="login__containerMsjError"></div>
         </div>
         <div class="login__contanerBtn">
-            <button class="login__btn">Enviar</button>
+            <button class="login__btn" (click)="onSubmit()">Enviar</button>
         </div>
         <div class="login__containerMsjError">
         </div>
