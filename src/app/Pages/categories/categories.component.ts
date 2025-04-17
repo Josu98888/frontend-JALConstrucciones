@@ -6,10 +6,11 @@ import { RouterLink } from '@angular/router';
 import { CategoryService } from '../../services/categoryService';
 import { environment } from '../../../environments/environment.development';
 import { NgFor } from '@angular/common';
+import { TitleComponent } from '../../MicroComponents/title/title.component';
 
 @Component({
   selector: 'app-categories',
-  imports: [CreateCategoryComponent, MysliderComponent, CardServiceComponent, RouterLink, NgFor],
+  imports: [CreateCategoryComponent, MysliderComponent, CardServiceComponent, RouterLink, NgFor, TitleComponent],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css'
 })
