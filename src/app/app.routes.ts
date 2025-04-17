@@ -5,6 +5,7 @@ import { ServicesbycategoryComponent } from './Pages/servicesbycategory/services
 import { ServiceDetailComponent } from './Pages/service-detail/service-detail.component';
 import { LoginComponent } from './Pages/login/login.component';
 import { AdminComponent } from './Pages/admin/admin.component';
+import { CategoriesComponent } from './Pages/categories/categories.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     {path: 'aboutUs', component: AboutUsComponent},
     {path: 'serviceDetail/:id', component: ServiceDetailComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'admin', component: AdminComponent}
+    {path: 'admin', component: AdminComponent},
+    {path: 'categories', component: CategoriesComponent}
 ];
