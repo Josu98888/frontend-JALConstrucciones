@@ -3,4 +3,10 @@
 }
 .categories__container {
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.categories__containerlistCategory {
+    margin: 20px;
 }

@@ -1,7 +1,16 @@
 <div class="categories">
     <div class="categories__container">
+        <!-- --------------------------- Top --------------------- -->
         <div class="categories__containerCreateCategory">
             <app-create-category></app-create-category>
         </div>
+        <!-- --------------------------- Top --------------------- -->
+         <div class="categories__containerlistCategory">
+            <app-myslider>
+                <app-card-service *ngFor="let category of categories" #slideItem [service]="category"
+                        [image]="category.image" [url]="url+'category/getImage/'" [description]="true"
+                        [routerLink]="['/services/', category.id]"></app-card-service>
+            </app-myslider>
+         </div>
     </div>
 </div>
