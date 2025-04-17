@@ -10,3 +10,20 @@
 .categories__containerlistCategory {
     margin: 20px;
 }
+.categories__containerSelcet {
+    margin: 10px;
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.categories__containerSelcet, .categories__input {
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 8px;
+    color: blue;
+}

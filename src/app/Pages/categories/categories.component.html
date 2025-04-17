@@ -5,12 +5,22 @@
             <app-create-category></app-create-category>
         </div>
         <!-- --------------------------- Top --------------------- -->
-         <div class="categories__containerlistCategory">
+        <div class="categories__containerlistCategory">
             <app-myslider>
                 <app-card-service *ngFor="let category of categories" #slideItem [service]="category"
-                        [image]="category.image" [url]="url+'category/getImage/'" [description]="true"
-                        [routerLink]="['/services/', category.id]"></app-card-service>
+                    [image]="category.image" [url]="url+'category/getImage/'" [description]="true"
+                    [routerLink]="['/services/', category.id]"></app-card-service>
             </app-myslider>
-         </div>
+        </div>
+        <div class="categories__containerSelcet">
+            <label class="categories__label">Seleccione categoría</label>
+            <select class="categories__input">
+                <option *ngFor="let categorie of categories " value="{{categorie.id}}">{{categorie.name}}</option>
+            </select>
+        </div>
+        <div class="categories__containerCreateCategory">
+            <app-create-category [edit]="true" [title]="'Editá una categoría'" [categories]="categories"
+                [image]=""></app-create-category>
+        </div>
     </div>
 </div>

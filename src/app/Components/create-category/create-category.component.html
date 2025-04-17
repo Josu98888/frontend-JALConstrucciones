@@ -1,9 +1,13 @@
 <div class="createCategorie">
-    <h1 class="createCategorie__title">Creá una nueva categoría</h1>
+    <h1 class="createCategorie__title">{{title}}</h1>
     <form class="createCategorie__form">
         <div class="createCategorie__containerInput">
             <label class="createCategorie__label" >Nombre</label>
             <input class="createCategorie__input" type="text" placeholder="Ingresé el nombre">
+        </div>
+        <div class="createCategorie__containerInput" *ngIf="edit == true">
+            <img *ngIf="image && !imagePreview" class="createCategorie__avatar" src="{{url+ 'category/getImage/'+ image}}" alt="imagen">
+            <img *ngIf="imagePreview"  class="createCategorie__avatar" src="{{imagePreview}}" alt="imagen">
         </div>
         <div class="createCategorie__containerInput">
             <label class="createCategorie__label" >Imagen</label>
@@ -14,7 +18,7 @@
             <textarea class="createCategorie__input"  placeholder="Ingresé la descripción"></textarea>
         </div>
         <div class="createCategorie__containerBtn">
-            <button class="createCategorie__button">Crear categoría</button>
+            <button class="createCategorie__button">Enviar</button>
         </div>
     </form>
 </div>
