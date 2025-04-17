@@ -2,28 +2,31 @@
     <div class="admin__container">
         <app-title [title]="'Perfil'" [h]="'h1'"></app-title>
         <div class="admin__containerAvatar">
-            <img class="admin__avatar"  src="{{url+ 'user/avatar/' +identity.image}}" alt="">
+            <img class="admin__avatar"  src="{{url+ 'user/avatar/' +identity.image}}" alt="avatar">
         </div>
         <div class="admin__containerForm">
-            <form class="admin__form" action="">
+            <form class="admin__form" [formGroup]="formUpdateUser">
                 <div class="admin__containerInput">
                     <label class="admin__label" for="">Nombre</label>
-                    <input class="admin__input" type="text" placeholder="{{identity.name}}">
+                    <input class="admin__input" type="text" formControlName="name">
                 </div>
                 <div class="admin__containerInput">
                     <label class="admin__label" for="">Apellido</label>
-                    <input class="admin__input" type="text" placeholder="{{identity.lastname}}">
+                    <input class="admin__input" type="text" formControlName="lastname">
                 </div>
                 <div class="admin__containerInput">
-                    <img class="admin__img" src="" alt="">
-                    <label class="admin__label" for="">image</label>
-                    <input class="admin__input" type="text">
+                    <img *ngIf="identity && !imagePreview" class="admin__avatar" src="{{url+ 'user/avatar/'+ identity.image}}" alt="avatar">
+                    <img *ngIf="imagePreview" class="admin__avatar" src="{{imagePreview}}" alt="avatar">
+                </div>
+                <div class="admin__containerInput">
+                    <label class="admin__label" for="">imagen</label>
+                    <input class="admin__input" type="file" accept=".png, .jpg, .jpeg" (change)="avatarUpload($event)">
                 </div>
                 <div class="admin__containerInput">
                     <label class="admin__label" for="">email</label>
-                    <input class="admin__input" type="text" placeholder="{{identity.email}}">
+                    <input class="admin__input" type="email" formControlName="email">
                 </div>
-                <button class="admin__btn">Guardar</button>
+                <button class="admin__btn" (click)="onSubmit()">Guardar</button>
             </form>
         </div>
     </div>
