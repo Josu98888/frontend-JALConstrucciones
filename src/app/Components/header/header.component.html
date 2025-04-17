@@ -39,7 +39,7 @@
             </button>
             <div class="header__containerAdmin" *ngIf="identity">
                 <ul class="header__containerList">
-                    <li class="header__togleMenu__links">Mi perfil</li>
+                    <li class="header__togleMenu__links" [routerLink]="['admin']">Mi perfil</li>
                     <li class="header__togleMenu__links">Crear proyecto</li>
                     <li class="header__togleMenu__links">Categorias</li>
                     <li class="header__togleMenu__links">Mis proyectos</li>

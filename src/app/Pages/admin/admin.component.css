@@ -1,0 +1,67 @@
+.admin {
+    width: 100vh;
+}
+.admin__container {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+/*  ---------------------- top ------------------------ */
+.admin__containerAvatar {
+    width: 80%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.admin__avatar {
+    width: 50%;
+    height: 80px;
+    border-radius: 50%;
+}
+/*  --------------------- bottom ----------------------- */
+.admin__containerForm {
+    width: 80%
+}
+.admin__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.admin__form, .admin__btn, .admin__avatar {
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 8px;
+    color: blue;
+}
+.admin__avatar {
+    border-radius: 50%;
+}
+.admin__containerInput {
+    display: flex;
+    flex-direction: column;
+}
+.admin__img {
+    border: 2px solid blue;
+    width: 100%;
+    height: 100px;
+}
+.admin__label {
+    font-size: 19px;
+}
+.admin__input {
+    border: 2px solid blue;
+    border-radius: 8px;
+}
+.admin__btn {
+    margin: 8px;
+    border: 2px solid blue;
+    width: 30%;
+    height: 30px;
+}

@@ -51,6 +51,6 @@ export class UserService {
           this.identity = null;
         }
         return this.identity;
-      }
+    }
     
 }
