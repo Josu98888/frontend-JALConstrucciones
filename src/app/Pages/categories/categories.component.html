@@ -16,15 +16,15 @@
         </div>
         <app-title [title]="'Elimine una categoría'" [h]="'h2'"></app-title>
         <div class="categories__containerSelcet">
-            <form class="categories__form">
+            <form class="categories__form" [formGroup]="formDelete">
                 <div class="categories__containerInput">
                     <label class="categories__label">Seleccione categoría</label>
-                <select class="categories__input">
+                <select class="categories__input" formControlName="categorieDelete">
                     <option *ngFor="let categorie of categories " value="{{categorie.id}}">{{categorie.name}}</option>
                 </select>
                 </div>
                 <div class="categories__containerInput">
-                    <button class="categories__btn">Eliminar</button>
+                    <button class="categories__btn" (click)="deleteCategory()">Eliminar</button>
                 </div>
             </form>
         </div>

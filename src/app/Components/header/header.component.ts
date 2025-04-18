@@ -27,7 +27,13 @@ export class HeaderComponent {
     private _userService:UserService
   ) {
     this.categories = this.getCategories();
+    // this.identity = this._userService.getIdentity();
+    // console.log(this.identity);
+  }
+
+  ngOnInit() {
     this.identity = this._userService.getIdentity();
+    console.log(this.identity);
   }
 
   togleMenu() {
