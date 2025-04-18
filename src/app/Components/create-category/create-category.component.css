@@ -46,3 +46,8 @@
     background-color: white;
     font-weight: bolder;
 }
+.createCategorie__image {
+    width: 50%;
+    height: 80px;
+    border-radius: 50%;
+}

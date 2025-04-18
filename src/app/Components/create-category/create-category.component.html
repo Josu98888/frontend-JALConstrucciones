@@ -1,24 +1,23 @@
 <div class="createCategorie">
     <h1 class="createCategorie__title">{{title}}</h1>
-    <form class="createCategorie__form">
+    <form class="createCategorie__form" [formGroup]="form">
         <div class="createCategorie__containerInput">
             <label class="createCategorie__label" >Nombre</label>
-            <input class="createCategorie__input" type="text" placeholder="Ingresé el nombre">
+            <input class="createCategorie__input" type="text" formControlName="name" placeholder="Ingresé el nombre">
         </div>
-        <div class="createCategorie__containerInput" *ngIf="edit == true">
-            <img *ngIf="image && !imagePreview" class="createCategorie__avatar" src="{{url+ 'category/getImage/'+ image}}" alt="imagen">
-            <img *ngIf="imagePreview"  class="createCategorie__avatar" src="{{imagePreview}}" alt="imagen">
+        <div class="createCategorie__containerInput">
+            <img *ngIf="imagePreview" class="createCategorie__image" src="{{imagePreview}}" alt="avatar">
         </div>
         <div class="createCategorie__containerInput">
             <label class="createCategorie__label" >Imagen</label>
-            <input class="createCategorie__input" type="file">
+            <input class="createCategorie__input" type="file" accept=".png, .jpg, .jpeg" (change)="avatarUpload($event)">
         </div>
         <div class="createCategorie__containerInput">
             <label class="createCategorie__label" >Descripción</label>
-            <textarea class="createCategorie__input"  placeholder="Ingresé la descripción"></textarea>
+            <textarea class="createCategorie__input" formControlName="description"  placeholder="Ingresé la descripción"></textarea>
         </div>
         <div class="createCategorie__containerBtn">
-            <button class="createCategorie__button">Enviar</button>
+            <button class="createCategorie__button" type="button" (click)="emitForm()">>Enviar</button>
         </div>
     </form>
 </div>

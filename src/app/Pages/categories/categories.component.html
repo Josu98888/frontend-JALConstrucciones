@@ -4,7 +4,7 @@
         <!-- --------------------------- Top --------------------- -->
         <div class="categories__containerCreateCategory">
             <app-title [title]="'Creá una categoría'" [h]="'h2'"></app-title>
-            <app-create-category></app-create-category>
+            <app-create-category (formCategory)="createCategory($event)"></app-create-category>
         </div>
         <!-- --------------------------- Top --------------------- -->
         <div class="categories__containerlistCategory">
@@ -36,8 +36,8 @@
             </select>
         </div>
         <div class="categories__containerCreateCategory">
-            <app-create-category [edit]="true" [title]="'Editá una categoría'" [categories]="categories"
-                [image]=""></app-create-category>
+            <app-create-category [edit]="true" [title]="'Editá una categoría'" 
+                ></app-create-category>
         </div>
     </div>
 </div>

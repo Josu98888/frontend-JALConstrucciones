@@ -21,6 +21,12 @@ export class CategoryService {
         return this._http.get(this.url + 'category', {headers: headers});
     }
 
+    create(token:any, data:any):Observable<any> {
+        let headers = new HttpHeaders().set('Authorization', token);
+
+        return this._http.post(this.url + 'category', data, {headers:headers});
+    }
+
     delete(token:any, id:any):Observable<any> {
         let headers = new HttpHeaders().set('Authorization', token);
 

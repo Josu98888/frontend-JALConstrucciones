@@ -69,4 +69,21 @@ export class CategoriesComponent {
     );
   }
 
+  createCategory(formData: FormData) {
+    console.log('Form recibido:', formData);
+  
+    this._categoryService.create(this.token, formData).subscribe(
+      response => {
+        if(response.status == 'success') {
+          this.status = 'success';
+          window.location.reload();
+        }
+      },
+      error => {
+        console.error('Error al crear categoría', error);
+        this.status = 'error';
+      }
+    );
+  }
+
 }
