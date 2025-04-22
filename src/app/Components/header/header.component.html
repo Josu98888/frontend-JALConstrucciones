@@ -42,7 +42,7 @@
                     <li class="header__togleMenu__links" [routerLink]="['admin']">Mi perfil</li>
                     <li class="header__togleMenu__links" [routerLink]="['categories']">Categorias</li>
                     <li class="header__togleMenu__links" [routerLink]="['createProject']">Crear proyecto</li>
-                    <li class="header__togleMenu__links">Salir</li>
+                    <li class="header__togleMenu__links" (click)="logout()">Salir</li>
                 </ul>
             </div>
         </div>

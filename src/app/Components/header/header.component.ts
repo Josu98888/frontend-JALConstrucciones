@@ -27,8 +27,6 @@ export class HeaderComponent {
     private _userService:UserService
   ) {
     this.categories = this.getCategories();
-    // this.identity = this._userService.getIdentity();
-    // console.log(this.identity);
   }
 
   ngOnInit() {
@@ -65,6 +63,11 @@ export class HeaderComponent {
         this.status = 'error';
       }
     );
+  }
+
+  logout() {
+    this._userService.clearSession();
+    window.location.reload();
   }
 
 }

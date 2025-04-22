@@ -79,4 +79,11 @@ export class UserService {
       headers: headers,
     });
   }
+
+  clearSession(): void {
+    this.identity = null;
+    this.token = null;
+    localStorage.removeItem('identity');
+    localStorage.removeItem('token');
+  }
 }
