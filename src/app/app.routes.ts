@@ -6,6 +6,7 @@ import { ServiceDetailComponent } from './Pages/service-detail/service-detail.co
 import { LoginComponent } from './Pages/login/login.component';
 import { AdminComponent } from './Pages/admin/admin.component';
 import { CategoriesComponent } from './Pages/categories/categories.component';
+import { CreateProjectComponent } from './Pages/create-project/create-project.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path: 'serviceDetail/:id', component: ServiceDetailComponent},
     {path: 'login', component: LoginComponent},
     {path: 'admin', component: AdminComponent},
-    {path: 'categories', component: CategoriesComponent}
+    {path: 'categories', component: CategoriesComponent},
+    {path: 'createProject', component: CreateProjectComponent}
 ];
