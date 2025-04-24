@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -15,10 +15,32 @@ import {
 })
 export class ProjectCreateComponent {
   @Output() formProject = new EventEmitter<any[]>();
-  @Input() category_id: any;
+  public category_id: any = 1;
   public form: any;
   public fileAvatars: File[] = [];
   public imagePreviews: (string | ArrayBuffer | null)[] = [];
+
+  ngOnInit() {
+    this.form = new FormGroup({
+      name: new FormControl('', Validators.required),
+      description: new FormControl('', Validators.required),
+      outstanding: new FormControl('', Validators.required),
+    });
+  }
+
+  emitForm() {
+    const formData = new FormData();
+    if (this.fileAvatars) {
+      this.fileAvatars.forEach((file) => {
+        formData.append('image', file);
+      });
+    }
+    // console.log(this.form.value);
+    // for (const [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
+    this.formProject.emit([this.form, formData]);
+  }
 
   avatarUpload($event: any) {
     const files = Array.from($event.target.files).slice(0, 3) as File[]; // hasta 3
