@@ -15,6 +15,12 @@ export class Service {
         this.url = environment.url;
     }
 
+    createService(token:any, data:any):Observable<any> {
+        let headers = new HttpHeaders().set('Authorization', token);
+
+        return this._http.post(this.url + 'service/store', data, {headers: headers});
+    }
+    
     getOutstanding(): Observable<any> {
         let headers = new HttpHeaders();
 
@@ -32,4 +38,5 @@ export class Service {
 
         return this._http.get(this.url + 'service/' + id, {headers: headers});
     }
+
 }
