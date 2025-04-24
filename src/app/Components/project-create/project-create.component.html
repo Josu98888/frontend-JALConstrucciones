@@ -1,10 +1,10 @@
 <div class="createProject">
     <h1 class="createProject__title">Creá tu proyecto</h1>
     <form class="createProject__form" [formGroup]="form">
-        <div class="createProject__containerInput">
+        <div class="createProject__containerInput" >
             <label class="createProject__label">Seleccione categoría</label>
-            <select class="createProject__input" >
-                <option></option>
+            <select class="createProject__input" formControlName="category_id">
+                <option *ngFor="let category of categories"  value="{{category.id}}">{{category.name}}</option>
             </select>
         </div>
         <div class="createProject__containerInput">
