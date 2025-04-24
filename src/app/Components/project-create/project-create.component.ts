@@ -44,10 +44,10 @@ export class ProjectCreateComponent {
         formData.append('image', file);
       });
     }
-    console.log(this.form.value);
-    for (const [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
+    // console.log(this.form.value);
+    // for (const [key, value] of formData.entries()) {
+    //   console.log(key, value);
+    // }
     this.formProject.emit([this.form, formData]);
   }
 

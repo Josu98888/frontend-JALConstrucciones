@@ -16,7 +16,7 @@ export class Service {
     }
 
     createService(token:any, data:any):Observable<any> {
-        let headers = new HttpHeaders().set('Authorization', token);
+        let headers = new HttpHeaders().set('Authorization', token).set('Content-Type', 'application/json');
 
         return this._http.post(this.url + 'service/store', data, {headers: headers});
     }

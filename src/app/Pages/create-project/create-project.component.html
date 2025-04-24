@@ -1,6 +1,6 @@
 <div class="projectsPage">
     <div class="projectsPage__container">
         <app-title [title]="'Creá tu proyecto'" [h]="'h1'"></app-title>
-    <app-project-create></app-project-create>
+    <app-project-create (formProject)="createProject($event)"></app-project-create>
     </div>
 </div>

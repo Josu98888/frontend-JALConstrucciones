@@ -31,7 +31,6 @@ export class HeaderComponent {
 
   ngOnInit() {
     this.identity = this._userService.getIdentity();
-    console.log(this.identity);
   }
 
   togleMenu() {
