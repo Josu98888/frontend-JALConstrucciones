@@ -16,14 +16,12 @@
             <textarea class="createProject__input" 
                 placeholder="Ingresé la descripción"></textarea>
         </div>
-        <div class="createProject__containerInput">
-            <img class="createProject__image"  alt="avatar">
-            <img class="createProject__image"  alt="avatar">
-            <img class="createProject__image"  alt="avatar">
+        <div class="createProject__containerInput" *ngFor="let preview of imagePreviews">
+            <img class="createProject__image" [src]="preview"  alt="image" >
         </div>
         <div class="createProject__containerInput">
             <label class="createProject__label" >Imagen (max: 3)</label>
-            <input class="createProject__input" type="file" multiple accept=".png, .jpg, .jpeg" >
+            <input class="createProject__input" type="file" multiple accept=".png, .jpg, .jpeg" (change)="avatarUpload($event)">
         </div>
         <div class="createProject__containerInput">
             <label class="createProject__label" for="activo">Destacado?</label>
