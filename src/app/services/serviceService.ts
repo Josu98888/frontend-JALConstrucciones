@@ -39,4 +39,9 @@ export class Service {
         return this._http.get(this.url + 'service/' + id, {headers: headers});
     }
 
+    deleteService(token:any, id:any):Observable<any> {
+        let headers = new HttpHeaders().set('Authorization', token);
+
+        return this._http.delete(this.url + 'service/delete/' + id, {headers: headers});
+    }
 }
