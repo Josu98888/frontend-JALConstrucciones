@@ -13,5 +13,8 @@
         <div class="cardServiceDetail__containerDescription" *ngIf="service">
             <p class="cardServiceDetail__description">{{service.description}}</p>
         </div>
+        <div class="cardServiceDetail__containerText" *ngIf="identity && identity.role == 'ROLE_ADMIN' ">
+            <button class="cardServiceDetail__containerDescription" (click)="delete()">Eliminar</button>
+        </div>
     </div>
 </article>
