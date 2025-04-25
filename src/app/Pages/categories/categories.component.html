@@ -1,19 +1,11 @@
 <div class="categories">
     <div class="categories__container">
-        <app-title [title]="'categorías'" [h]="'h1'"></app-title>
         <!-- --------------------------- Top --------------------- -->
         <div class="categories__containerCreateCategory">
             <app-title [title]="'Creá una categoría'" [h]="'h2'"></app-title>
             <app-create-category (formCategory)="createCategory($event)"></app-create-category>
         </div>
-        <!-- --------------------------- Top --------------------- -->
-        <div class="categories__containerlistCategory">
-            <app-myslider>
-                <app-card-service *ngFor="let category of categories" #slideItem [service]="category"
-                    [image]="category.image" [url]="url+'category/getImage/'" [description]="true"
-                    [routerLink]="['/services/', category.id]"></app-card-service>
-            </app-myslider>
-        </div>
+        <!-- --------------------------- Bottom --------------------- -->
         <app-title [title]="'Elimine una categoría'" [h]="'h2'"></app-title>
         <div class="categories__containerSelcet">
             <form class="categories__form" [formGroup]="formDelete">
@@ -28,16 +20,12 @@
                 </div>
             </form>
         </div>
-        <app-title [title]="'Editá una categoría'" [h]="'h2'"></app-title>
-        <div class="categories__containerSelcet">
-            <label class="categories__label">Seleccione categoría</label>
-            <select class="categories__input">
-                <option *ngFor="let categorie of categories " value="{{categorie.id}}">{{categorie.name}}</option>
-            </select>
-        </div>
-        <div class="categories__containerCreateCategory">
-            <app-create-category [edit]="true" [title]="'Editá una categoría'" 
-                ></app-create-category>
+        <div class="categories__containerlistCategory">
+            <app-myslider>
+                <app-card-service *ngFor="let category of categories" #slideItem [service]="category"
+                    [image]="category.image" [url]="url+'category/getImage/'" [description]="true"
+                    [routerLink]="['/services/', category.id]"></app-card-service>
+            </app-myslider>
         </div>
     </div>
 </div>

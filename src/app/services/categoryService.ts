@@ -27,6 +27,12 @@ export class CategoryService {
         return this._http.post(this.url + 'category', data, {headers:headers});
     }
 
+    updateCategorie(token:any, id:any):Observable<any> {
+        let headers = new HttpHeaders().set('Authorization', token);
+
+        return this._http.post(this.url + 'category/update/' + id, {headers: headers});
+    }
+
     delete(token:any, id:any):Observable<any> {
         let headers = new HttpHeaders().set('Authorization', token);
 

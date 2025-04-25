@@ -28,7 +28,7 @@ export class CategoriesComponent {
     private _userService:UserService
   ) {
     this.url = environment.url;
-    this.token = _userService.getToken();
+    this.token = this._userService.getToken();
   }
 
   ngOnInit() {

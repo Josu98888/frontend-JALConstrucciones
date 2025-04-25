@@ -1,5 +1,4 @@
 <div class="createCategorie">
-    <h1 class="createCategorie__title">{{title}}</h1>
     <form class="createCategorie__form" [formGroup]="form">
         <div class="createCategorie__containerInput">
             <label class="createCategorie__label" >Nombre</label>
@@ -17,7 +16,7 @@
             <textarea class="createCategorie__input" formControlName="description"  placeholder="Ingresé la descripción"></textarea>
         </div>
         <div class="createCategorie__containerBtn">
-            <button class="createCategorie__button" type="button" (click)="emitForm()">>Enviar</button>
+            <button class="createCategorie__button" type="button" (click)="emitForm()">Enviar</button>
         </div>
     </form>
 </div>
