@@ -6,7 +6,7 @@ import { environment } from "../../environments/environment.development";     //
 @Injectable({
     providedIn: 'root',
 })
-export class Image {
+export class ImageService {
     public url:string;
 
     constructor(
