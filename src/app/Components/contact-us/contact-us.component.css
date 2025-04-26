@@ -1,50 +1,54 @@
-.contactUs {
+/*  ---------------- Mobile ----------------------- */
+@media (min-width: 0) {
+  .contactUs {
     width: 100vh;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     padding: 8px;
     padding-left: 18px;
     gap: 8px;
-}
-/*  ------------------------ Top --------------------------- */
-.Contactanos__title {
-    text-align: center;
-}
-/*  ------------------------ Top --------------------------- */
-.contactUs__form {
+  }
+  
+  /*  ------------------------ Top --------------------------- */
+  .contactUs__form {
     padding: 10px;
     padding-inline: 40px;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 4px;
-}
-.contactUs__containerInput {
+  }
+  .contactUs__containerInput {
     width: 220px;
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
- .contactUs__form , .contactUs__btn, .contactUs__containerText{
+  }
+  .contactUs__form,
+  .contactUs__btn,
+  .contactUs__containerText,
+  .contactUs__input,
+  .contactUs__textarea {
     border-top: 2px solid green;
     border-left: 2px solid green;
     border-bottom: 2px solid blue;
     border-right: 2px solid blue;
+    filter: drop-shadow(0 0 5px rgb(110, 226, 149));
     border-radius: 8px;
-    filter: drop-shadow(2px 2px 2px rgb(12, 245, 12));
     color: blue;
     text-align: center;
-}
-.contactUs__input  {
+  }
+  .contactUs__input {
     height: 20px;
     border-radius: 8px;
-}
-.contactUs__textarea {
+  }
+  .contactUs__textarea {
     height: 65px;
     border-radius: 8px;
-}
-.contactUs__btn {
+  }
+  .contactUs__btn {
     padding: 10px;
-    color: blue;
+  }
 }
+/*  ---------------- Tablet ----------------------- */

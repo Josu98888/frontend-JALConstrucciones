@@ -9,7 +9,6 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './create-category.component.css'
 })
 export class CreateCategoryComponent {
-  @Input() title:string = 'Creá una categoría';
   @Input() edit:boolean = false;
   @Output() formCategory = new EventEmitter<any>(); 
   public form:any;

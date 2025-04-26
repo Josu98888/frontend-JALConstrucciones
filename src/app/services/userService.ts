@@ -6,6 +6,7 @@ import {
 } from '@angular/common/http'; //para las solicitudes Http
 import { catchError, Observable, throwError } from 'rxjs'; //para las respuestas de las solicitudes
 import { environment } from '../../environments/environment.development'; //la url del backend
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root', // ✅ Esto hace que Angular lo pueda inyectar sin providers extras
@@ -15,7 +16,10 @@ export class UserService {
   public url: string; // para guardar la url del backend
   public token: any; // para guardar el token del usuario
 
-  constructor(private _http: HttpClient) {
+  constructor(
+    private _http: HttpClient,
+    private _router:Router
+  ) {
     this.url = environment.url;
   }
 
@@ -85,5 +89,6 @@ export class UserService {
     this.token = null;
     localStorage.removeItem('identity');
     localStorage.removeItem('token');
+    this._router.navigate(['']);
   }
 }

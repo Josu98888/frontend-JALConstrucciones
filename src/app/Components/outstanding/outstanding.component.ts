@@ -31,7 +31,6 @@ export class OutstandingComponent {
   getOutstanding() {
     this._service.getOutstanding().subscribe(
       response => {
-        console.log(response);
         if(response.status == 'success') {
           this.outstanding = response.services;
           this.status = 'success';

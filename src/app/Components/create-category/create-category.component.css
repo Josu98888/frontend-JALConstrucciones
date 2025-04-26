@@ -1,53 +1,58 @@
-.createCategorie {
+/*  --------------------- Mobile ------------------------------ */
+@media (min-width: 0) {
+  .createCategorie {
     border-radius: 8px;
     padding: 15px;
     margin: 15px;
-}
-.createCategorie__title {
+  }
+  .createCategorie__title {
     text-align: center;
     font-size: 22px;
-}
-.createCategorie, .createCategorie__input, .createCategorie__button {
+  }
+  .createCategorie,
+  .createCategorie__input,
+  .createCategorie__button {
     border-top: 2px solid green;
     border-left: 2px solid green;
     border-bottom: 2px solid blue;
     border-right: 2px solid blue;
     border-radius: 8px;
     color: blue;
-}
-/* --------- Form ------------ */
-.createCategorie__form {
+  }
+  /* --------- Form ------------ */
+  .createCategorie__form {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 15px;
-}
-.createCategorie__containerInput {
+  }
+  .createCategorie__containerInput {
     width: 100%;
     display: flex;
     gap: 6px;
     align-items: center;
-}
-.createCategorie__label {
+  }
+  .createCategorie__label {
     font-size: 16px;
     font-weight: bolder;
-}
-.createCategorie__input {
+  }
+  .createCategorie__input {
     width: 100%;
-}
-.createCategorie__containerBtn {
+  }
+  .createCategorie__containerBtn {
     align-self: center;
     margin: 15px;
-}
-.createCategorie__button {
+  }
+  .createCategorie__button {
     text-decoration: none;
     padding: 3px;
     background-color: white;
     font-weight: bolder;
-}
-.createCategorie__image {
+  }
+  .createCategorie__image {
     width: 50%;
     height: 80px;
     border-radius: 50%;
+  }
 }
