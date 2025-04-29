@@ -1,5 +1,4 @@
-import { NgFor } from '@angular/common';
-import { Component, ContentChildren, ElementRef, QueryList, ViewChild} from '@angular/core';
+import { Component, ContentChildren, ElementRef, QueryList, ViewChild, AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'app-myslider',
@@ -7,12 +6,24 @@ import { Component, ContentChildren, ElementRef, QueryList, ViewChild} from '@an
   templateUrl: './myslider.component.html',
   styleUrl: './myslider.component.css'
 })
-export class MysliderComponent {
+export class MysliderComponent implements AfterViewInit {
   @ViewChild('slider', { static: true }) slider!: ElementRef;
   @ContentChildren('slideItem') slideItems!: QueryList<ElementRef>;
   currentIndex: number = 0;
-  interval:number = 0;
+  interval:number = 5000;
   dots:boolean = false;
+   autoSlideInterval:any;
+
+
+  ngAfterViewInit() {
+    this.startAutoSlide(); // inicia el autoplay al renderizar
+  }
+
+  startAutoSlide() {
+    this.autoSlideInterval = setInterval(() => {
+      this.next();
+    }, this.interval);
+  }
 
   getTransform() {
     return `translateX(-${this.currentIndex * 100}%)`;

@@ -19,7 +19,6 @@
     border-bottom: 2px solid blue;
     border-right: 2px solid blue;
     border-radius: 8px;
-    filter: drop-shadow(0 0 5px rgb(110, 170, 226));
   }
   .cardService__img {
     width: 100%;

@@ -4,7 +4,6 @@
 .whychooseus__content {
     margin-top:15px ;
     margin-bottom: 15px;
-    filter: drop-shadow(0 0 5px rgb(110, 170, 226));
 }
 .whychooseus__container {
     display: flex;
