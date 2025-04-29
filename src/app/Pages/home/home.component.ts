@@ -3,10 +3,11 @@ import { OutstandingComponent } from '../../Components/outstanding/outstanding.c
 import { ShowcategoriesComponent } from '../../Components/showcategories/showcategories.component';
 import { WhychooseusComponent } from '../../Components/whychooseus/whychooseus.component';
 import { ContactUsComponent } from '../../Components/contact-us/contact-us.component';
+import { SocialNetworksComponent } from '../../Components/social-networks/social-networks.component';
 
 @Component({
   selector: 'app-home',
-  imports: [OutstandingComponent, ShowcategoriesComponent, WhychooseusComponent, ContactUsComponent],
+  imports: [OutstandingComponent, ShowcategoriesComponent, WhychooseusComponent, ContactUsComponent, SocialNetworksComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

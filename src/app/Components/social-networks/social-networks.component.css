@@ -1,0 +1,21 @@
+/*  ------------------- Mobile ----------------------- */
+@media (min-width: 0) {
+    .social {
+        width: 100vh;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+    .social__container {
+    border-top: 2px solid green;
+    border-left: 2px solid green;
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-radius: 8px;
+    }
+    .social__containerNetworks {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 19px;
+    }
+}
