@@ -66,7 +66,7 @@ export class HeaderComponent {
 
   logout() {
     this._userService.clearSession();
-    window.location.reload();
+    this._router.navigate(['']);
   }
 
 }

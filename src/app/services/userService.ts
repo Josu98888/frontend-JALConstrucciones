@@ -89,6 +89,5 @@ export class UserService {
     this.token = null;
     localStorage.removeItem('identity');
     localStorage.removeItem('token');
-    this._router.navigate(['']);
   }
 }
