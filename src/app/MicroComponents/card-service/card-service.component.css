@@ -54,3 +54,19 @@
     font-size: 22px;
   }
 }
+/*  --------------------- laptop ------------------------------ */
+@media (min-width: 1024px) {
+  .cardService__img {
+    width: 100%;
+    height: 500px;
+    object-fit:fill;
+  }
+  .cardService__description {
+    font-size: 20px;
+  }
+  .cardService__containerText, .cardService__containerDescription {
+    padding: 0;
+    margin: 0;
+    height: 70px;
+  }
+}
