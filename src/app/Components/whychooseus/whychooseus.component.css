@@ -46,3 +46,18 @@
         font-size: 18px;
     }
 }
+/*  --------------------------- Laptop ---------------------- */
+@media (min-width: 1024px) {
+    .whychooseus {
+        width: 215vh;
+    }
+    .whychooseus__content {
+        display: flex;
+    }
+    .whychooseus__container {
+        gap: 20px;    
+    }
+    .whychooseus__par {
+        font-size: 19px;
+    }
+}
