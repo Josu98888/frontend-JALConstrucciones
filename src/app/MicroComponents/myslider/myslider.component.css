@@ -1,35 +1,34 @@
-
 /*  --------------------- Mobile ------------------------------ */
 @media (min-width: 0) {
-    .slider {
-        width: 100vh;
+  .slider {
+    width: 100vh;
   }
-.slider__container {
+  .slider__container {
     width: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: transform 0.5s ease;
-}
-.slider__track {
+  }
+  .slider__track {
     width: 100vh;
     display: flex;
     transition: transform 0.5s ease;
-}
-.slider__track ::ng-deep > * {
+  }
+  .slider__track ::ng-deep > * {
     flex: 0 0 100%;
     max-width: 100%;
     box-sizing: border-box;
     padding: 0 1rem;
-}
-.slider__containerBtn {
+  }
+  .slider__containerBtn {
     width: 100vh;
     position: absolute;
     display: flex;
     justify-content: space-between;
-}
-.slider__btn {
+  }
+  .slider__btn {
     border-top: 2px solid #7eff05;
     border-left: 2px solid #7eff05;
     border-bottom: 2px solid #003b6f;
@@ -39,7 +38,15 @@
     background-color: transparent;
     padding: 10px;
     cursor: pointer;
+  }
 }
-
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 768px) {
+  .slider__btn {
+    border-top: 4px solid #7eff05;
+    border-left: 4px solid #7eff05;
+    border-bottom: 4px solid #003b6f;
+    border-right: 4px solid #003b6f;
+    margin-inline: 40px;
+  }
 }
-
