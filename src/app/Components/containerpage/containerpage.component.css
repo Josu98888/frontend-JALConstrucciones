@@ -18,4 +18,13 @@
     min-height: 72vh;
   }
 }
-
+/*  ---------------- Laptop --------------------- */
+@media (min-width: 1024px) {
+  .page {
+    width: 215vh;
+    min-height: 82vh;
+  }
+  .page__container {
+    justify-content: center;
+  }
+}
