@@ -45,3 +45,12 @@
     text-align: center;
   }
 }
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 768px) {
+  .cardService__img {
+    height: 450px;
+  }
+  .cardService__description {
+    font-size: 22px;
+  }
+}
