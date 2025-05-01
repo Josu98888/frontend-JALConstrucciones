@@ -2,5 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+}
+@media (min-width: 1024px) {
+    .outstanding {
+        width: 215vh;
+        min-height: 82vh;
+    }
 }

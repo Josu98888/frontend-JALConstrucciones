@@ -50,3 +50,21 @@
     margin-inline: 40px;
   }
 }
+/*  --------------------- Laptop ------------------------------ */
+@media (min-width: 1024px) {
+  .slider {
+    width: 210vh;
+  }
+  .slider__container {
+    width: 210vh;
+  }
+  .slider__track {
+    width: 210vh;
+  }
+  .slider__containerBtn {
+    width: 210vh;
+  }
+  .slider__btn {
+    margin-inline: 40px;
+  }
+}
