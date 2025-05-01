@@ -3,7 +3,7 @@
   .page {
     width: 100vh;
     overflow: hidden;
-    min-height: 110vh;
+    min-height: 90vh;
   }
   .page__container {
     padding: 8px;
@@ -12,7 +12,7 @@
   }
 }
 /*  ---------------- Tablet --------------------- */
-@media (min-width: 0) {
+@media (min-width: 768px) {
   .page {
     width: 106vh;
     min-height: 72vh;

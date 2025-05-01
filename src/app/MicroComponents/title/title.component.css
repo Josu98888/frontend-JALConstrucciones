@@ -14,3 +14,10 @@
     background-clip: text;
   }
 }
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 768px) {
+  .title__h {
+    font-weight:900;
+    font-size: 28px;
+  }
+}
