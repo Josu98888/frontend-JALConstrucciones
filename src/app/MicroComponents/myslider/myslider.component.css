@@ -30,12 +30,11 @@
     justify-content: space-between;
 }
 .slider__btn {
-    border-top: 2px solid green;
-    border-left: 2px solid green;
-    border-bottom: 2px solid blue;
-    border-right: 2px solid blue;
+    border-top: 2px solid #7eff05;
+    border-left: 2px solid #7eff05;
+    border-bottom: 2px solid #003b6f;
+    border-right: 2px solid #003b6f;
     border-radius: 8px;
-    filter: drop-shadow(0 0 5px rgba(179, 224, 187, 0.5));
     margin-inline: 30px;
     background-color: transparent;
     padding: 10px;

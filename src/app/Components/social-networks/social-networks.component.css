@@ -5,11 +5,19 @@
         padding: 12px;
         box-sizing: border-box;
     }
+    .social__containerLogo {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    .social__logo {
+        width: 200px;
+    }
     .social__container {
-    border-top: 2px solid green;
-    border-left: 2px solid green;
-    border-bottom: 2px solid blue;
-    border-right: 2px solid blue;
+    border-top: 6px solid #7bc238;
+    border-left: 6px solid #7bc238;
+    border-bottom: 6px solid #003b6f;
+    border-right: 6px solid #003b6f;
     border-radius: 8px;
     }
     .social__containerNetworks {

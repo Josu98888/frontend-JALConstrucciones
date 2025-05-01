@@ -16,17 +16,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;;
-    border-top: 2px solid green;
-    border-left: 2px solid green;
-    border-bottom: 2px solid blue;
-    border-right: 2px solid blue;
+    border-top: 4px solid #7eff04;
+    border-left: 4px solid #7eff04;
+    border-bottom: 4px solid #003b6f;
+    border-right: 4px solid #003b6f;
     border-radius: 8px;
 }
 .whychooseus__title, .whychooseus__par {
     text-align: center;
 }
 .whychooseus__par {
-    color: blue;
+    color: #003b6f;
     font-weight: 700;
     margin: 5px;
 }

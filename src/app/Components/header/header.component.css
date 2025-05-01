@@ -1,13 +1,13 @@
 /*  ------------------------------------------- Mobile ------------------------------------------------ */
 @media (min-width:0) {
 .header {
-    min-width: 100vh;
-    height: 70px;
+    width: 100vh;
+    height: 85px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid green;
+    border-bottom: 4px solid #7bc238;
   }
   /* -------------------------------------------- left ---------------------------------- */
   .header__containerMenu {
@@ -16,20 +16,22 @@
     margin: 2px;
   }
   .header__BtnMenu, .header__togleMenu__btnClose {
-      border: 2px solid green;
-      border-bottom: 2px solid blue;
-      border-right: 2px solid blue;
+      border: 2px solid #7bc238;
+      border-bottom: 4px solid #003b6f;
+      border-right: 4px solid #003b6f;
       border-radius: 8px;
       background-color: white;
-      filter: drop-shadow(2px 2px 2px rgb(12, 245, 12));
+      /* filter: drop-shadow(2px 2px 2px rgb(12, 245, 12)); */
   }
   /* -------------------------------------------- Right ---------------------------------- */
   .header__containerLogo {
-    flex-grow: 1;
     display: flex;
     justify-content: center;
+    flex-grow: 1;
   }
   .header__logo {
+    width: 230PX;
+    height: 100PX;
     object-fit: cover;
   }
   /* ---------------- TogleMenu ------------- */
@@ -37,8 +39,8 @@
     width: 100vh;
     box-sizing: border-box;
     background-color: white;
-    color: green;
-    border-bottom: 2px solid green;
+    color: #7bc238;
+    border-bottom: 2px solid #7bc238;
     display: flex;
     justify-content: space-between;
     position: absolute;
