@@ -1,5 +1,4 @@
 <div class="createProject">
-    <h1 class="createProject__title">Creá tu proyecto</h1>
     <form class="createProject__form" [formGroup]="form">
         <div class="createProject__containerInput" >
             <label class="createProject__label">Seleccione categoría</label>
@@ -16,8 +15,8 @@
             <textarea class="createProject__input" 
                 placeholder="Ingresé la descripción" formControlName="description"></textarea>
         </div>
-        <div class="createProject__containerInput" *ngFor="let preview of imagePreviews">
-            <img class="createProject__image" [src]="preview"  alt="image" >
+        <div class="createProject__containerImage" >
+            <img class="createProject__image" *ngFor="let preview of imagePreviews" [src]="preview"  alt="image" >
         </div>
         <div class="createProject__containerInput">
             <label class="createProject__label" >Imagen (max: 3)</label>
