@@ -71,3 +71,40 @@
     height: 30px;
   }
 }
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 768px) {
+  .admin__container {
+    padding: 2px;
+    gap: 12px;
+  }
+  /*  ---------------------- top ------------------------ */
+  .admin__containerAvatar {
+    width: 90%;
+  }
+  .admin__avatar {
+    width: 50%;
+  }
+  /*  --------------------- bottom ----------------------- */
+  .admin__containerForm {
+    width: 100%;
+  }
+  .admin__form {
+    width: 100%;
+    gap: 15px;
+  }
+  .admin__containerInput {
+    width: 90%;
+  }
+  .admin__label {
+    font-size: 22px;
+  }
+  .admin__input {
+    border-radius: 8px;
+    width: 60%;
+    text-align: center;
+  }
+  .admin__btn {
+    width: 20%;
+    height: 40px;
+  }
+}
