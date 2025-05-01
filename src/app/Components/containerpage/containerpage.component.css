@@ -12,4 +12,10 @@
   }
 }
 /*  ---------------- Tablet --------------------- */
+@media (min-width: 0) {
+  .page {
+    width: 106vh;
+    min-height: 72vh;
+  }
+}
 
