@@ -12,12 +12,12 @@
   .createCategorie,
   .createCategorie__input,
   .createCategorie__button {
-    border-top: 2px solid green;
-    border-left: 2px solid green;
-    border-bottom: 2px solid blue;
-    border-right: 2px solid blue;
+    border-top: 6px solid #7eff05;
+    border-left: 6px solid #7eff05;
+    border-bottom: 6px solid #003b6f;
+    border-right: 6px solid #003b6f;
     border-radius: 8px;
-    color: blue;
+    color: #003b6f;
   }
   /* --------- Form ------------ */
   .createCategorie__form {
