@@ -52,3 +52,33 @@
   }
 }
 /*  ---------------- Tablet ----------------------- */
+@media (min-width: 768px) {
+  .contactUs {
+    gap: 12px;
+  }
+  .contactUs__text {
+    font-size: 20px;
+  }
+  /*  ------------------------ Top --------------------------- */
+  .contactUs__form {
+    padding: 20px;
+    gap: 8px;
+  }
+  .contactUs__label, .contactUs__input, .contactUs__textarea, .contactUs__btn {
+    font-size: 16px;
+  }
+  .contactUs__containerInput {
+    width: 280px;
+    gap: 8px;
+  }
+  .contactUs__input {
+    height: 23px;
+  }
+  .contactUs__textarea {
+    height: 80px;
+  }
+  .contactUs__btn {
+    padding: 15px;
+  }
+}
+
