@@ -1,5 +1,5 @@
 <header class="header">
-    <!-- ------------------------------------------- Left Mobile ----------------------------- -->
+    <!-- ------------------------------------------- Left Mobile and Tablet ----------------------------- -->
     <div class="header__containerMenu">
         <button class="header__BtnMenu" (click)="togleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-list"
@@ -9,11 +9,27 @@
             </svg>
         </button>
     </div>
-    <!-- ------------------------------------------- Right Mobile ----------------------------- -->
+    <!-- ------------------------------------------- Left laptop ----------------------------- -->
+    <div class="header__containerNav">
+        <ul class="header__togleMenu__containerLinks">
+            <li class="header__togleMenu__links" [routerLink]="['']">Home</li>
+            <li class="header__togleMenu__links" (click)="togleCategories()">
+                <a class="header__togleMenu__links">Servicios</a>
+                <ul class="header__togleMenu__categoriesLaptop" [ngClass]="{'open': menuCategories}"
+                    >
+                    <li *ngFor="let category of categories" class="header__togleMenu__linksLaptop" [routerLink]="['/services/', category.id]">{{category.name}}
+                    </li>
+                </ul>
+            </li>
+            <li class="header__togleMenu__links" [routerLink]="['/aboutUs']">Sobre Nosotros</li>
+            <li class="header__togleMenu__links" (click)="goToContact()">Contacto</li>
+        </ul>
+    </div>
+    <!-- ------------------------------------------- Center ----------------------------- -->
     <div class="header__containerLogo">
         <img class="header__logo" src="logos/logoJALHeaders.png" alt="logo">
     </div>
-    <!-- ------------------------------------------- TogleMenu Mobile ----------------------------- -->
+    <!-- ------------------------------------------- TogleMenu Mobile and Tablet ----------------------------- -->
     <div class="header__togleMenu" [ngClass]="{'open': menuItems}">
         <ul class="header__togleMenu__containerLinks">
             <li class="header__togleMenu__links" [routerLink]="['']">Home</li>
@@ -46,5 +62,14 @@
                 </ul>
             </div>
         </div>
+    </div>
+    <!-- ------------------------------------------- Right Laptop  ----------------------------- -->
+    <div class="header__containerAdminLaptop" *ngIf="identity && identity.name">
+        <ul class="header__containerList">
+            <li class="header__togleMenu__links" [routerLink]="['admin']">Mi perfil</li>
+            <li class="header__togleMenu__links" [routerLink]="['categories']">Categorias</li>
+            <li class="header__togleMenu__links" [routerLink]="['createProject']">Crear proyecto</li>
+            <li class="header__togleMenu__links" (click)="logout()">Salir</li>
+        </ul>
     </div>
 </header>
