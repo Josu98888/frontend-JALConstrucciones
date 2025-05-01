@@ -48,3 +48,26 @@
     color: #003b6f;
   }
 }
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 768px) {
+  .login__form {
+    padding: 20px;
+    gap: 10px;
+  }
+  .login__containerInput {
+    width: 300px;
+    gap: 8px;
+  }
+  .login__label {
+    font-size: 19px;
+    font-weight: bold;
+  }
+  .login__input {
+    height: 25px;
+    font-size: 16px;
+  }
+  .login__btn {
+    padding: 15px;
+    font-size: 18px;
+  }
+}
