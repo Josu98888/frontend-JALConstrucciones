@@ -40,3 +40,23 @@
     width: 30px;
   }
 }
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 768px) {
+  .footer {
+    width: 108vh;
+  }
+  /*  ------------------- Left ----------------- */
+  .footer__logo {
+    width: 150px;
+  }
+  .footer_link {
+    font-size: 15px;
+  }
+  .footer__text {
+    font-size: 15px;
+  }
+  /*  ------------------- Right ----------------- */
+  .footer__logoJs {
+    width: 40px;
+  }
+}
