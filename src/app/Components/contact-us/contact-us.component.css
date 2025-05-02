@@ -84,34 +84,34 @@
 /*  ---------------- Laptop ----------------------- */
 @media (min-width: 1024px) {
   .contactUs {
-    gap: 12px;
+    gap: 5px;
   }
   .contactUs__text {
-    font-size: 20px;
+    font-size: 18px;
   }
   /*  ------------------------ Top --------------------------- */
   .contactUs__title {
     display: none;
   }
   .contactUs__form {
-    padding: 20px;
-    gap: 8px;
+    padding: 10px;
+    gap: 4px;
   }
   .contactUs__label, .contactUs__input, .contactUs__textarea, .contactUs__btn {
-    font-size: 16px;
+    font-size: 14px;
   }
   .contactUs__containerInput {
     width: 280px;
-    gap: 8px;
+    gap: 4px;
   }
   .contactUs__input {
-    height: 23px;
+    height: 18px;
   }
   .contactUs__textarea {
-    height: 80px;
+    height: 70px;
   }
   .contactUs__btn {
-    padding: 15px;
+    padding: 8px;
   }
 }
 
