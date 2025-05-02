@@ -15,7 +15,8 @@
     cursor: pointer;
     margin: 2px;
   }
-  .header__containerNav, .header__containerAdminLaptop {
+  .header__containerNav,
+  .header__containerAdminLaptop {
     display: none;
   }
   .header__BtnMenu,
@@ -142,7 +143,9 @@
   .header__containerMenu {
     display: none;
   }
-  .header__containerNav, .header__containerAdminLaptop, .header__togleMenu__linksLaptop {
+  .header__containerNav,
+  .header__containerAdminLaptop,
+  .header__togleMenu__linksLaptop {
     display: block;
     width: 30%;
     border: 2px solid #7bc238;
@@ -154,7 +157,7 @@
     display: flex;
     gap: 5px;
   }
-  .header__togleMenu__categoriesLaptop.open  {
+  .header__togleMenu__categoriesLaptop.open {
     display: block;
     position: absolute;
     top: 110px;
@@ -173,10 +176,12 @@
   /* -------------------------------------------- Center ---------------------------------- */
   .header__containerLogo {
     display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .header__logo {
     width: 250px;
-    margin-right: 80px;
   }
   /* -------------------------------------------- Rigth ---------------------------------- */
   .header__containerList {

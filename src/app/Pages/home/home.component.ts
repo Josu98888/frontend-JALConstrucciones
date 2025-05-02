@@ -5,10 +5,11 @@ import { WhychooseusComponent } from '../../Components/whychooseus/whychooseus.c
 import { ContactUsComponent } from '../../Components/contact-us/contact-us.component';
 import { SocialNetworksComponent } from '../../Components/social-networks/social-networks.component';
 import { TitleComponent } from '../../MicroComponents/title/title.component';
+import { AnimationComponent } from '../../Components/animation/animation.component';
 
 @Component({
   selector: 'app-home',
-  imports: [OutstandingComponent, ShowcategoriesComponent, WhychooseusComponent, ContactUsComponent, SocialNetworksComponent, TitleComponent],
+  imports: [OutstandingComponent, ShowcategoriesComponent, WhychooseusComponent, ContactUsComponent, SocialNetworksComponent, TitleComponent, AnimationComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

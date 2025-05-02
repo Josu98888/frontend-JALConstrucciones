@@ -4,7 +4,11 @@
     <app-showcategories></app-showcategories>
     <app-title class="home__titleContact" [title]="'Contactanos'" [h]="'h1'"></app-title>
     <div class="home__containerContact">
-        <app-social-networks></app-social-networks>
+        <div class="home__containerContactLeft">
+            <app-social-networks></app-social-networks>
+            <app-animation class="home__animation"></app-animation>
+        </div>
+        
         <app-contact-us id="contactUs"></app-contact-us>
     </div>
 </main>

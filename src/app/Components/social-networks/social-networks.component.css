@@ -39,7 +39,7 @@
 /*  ------------------- Laptop ----------------------- */
 @media (min-width: 1024px) {
     .social {
-        width: 100vh;
+        width: 104vh;
     }
     .social__logo {
         width: 200px;
