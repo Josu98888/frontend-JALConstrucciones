@@ -53,16 +53,16 @@
 /*  --------------------- Laptop ------------------------------ */
 @media (min-width: 1024px) {
   .slider {
-    width: 210vh;
+    width: 190vh;
   }
   .slider__container {
-    width: 210vh;
+    width: 190vh;
   }
   .slider__track {
-    width: 210vh;
+    width: 190vh;
   }
   .slider__containerBtn {
-    width: 210vh;
+    width: 190vh;
   }
   .slider__btn {
     margin-inline: 40px;
