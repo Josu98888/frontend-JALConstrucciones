@@ -49,7 +49,7 @@
 /*  --------------------------- Laptop ---------------------- */
 @media (min-width: 1024px) {
     .whychooseus {
-        width: 215vh;
+        width: 212vh;
     }
     .whychooseus__content {
         display: flex;

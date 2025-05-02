@@ -1,6 +1,22 @@
-.home {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+/*  ------------------------ Mobile ------------------- */
+@media(min-width: 0) {
+    .home {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .home__titleContact {
+        display: none;
+    }
+}
+/*  ------------------------ Laptop ------------------- */
+@media(min-width: 1024px) {
+    .home__titleContact {
+        display: block;
+    }
+    .home__containerContact {
+        display: flex;
+    }
 }
