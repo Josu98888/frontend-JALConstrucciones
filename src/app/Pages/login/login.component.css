@@ -71,3 +71,17 @@
     font-size: 18px;
   }
 }
+/*  --------------------- Laptop ------------------------------ */
+@media (min-width: 1024px) {
+  .login {
+    width: 210vh;
+    align-items: center;
+  }
+  .login__form {
+    width: 170vh;
+  }
+  .login__btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
