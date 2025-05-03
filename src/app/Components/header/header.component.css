@@ -149,9 +149,10 @@
     display: block;
     width: 30%;
     border: 2px solid #7bc238;
-    border-bottom: 4px solid #003b6f;
-    border-right: 4px solid #003b6f;
+    border-bottom: 2px solid #003b6f;
+    border-right: 2px solid #003b6f;
     border-radius: 8px;
+    padding: 0;
   }
   .header__togleMenu__containerLinks {
     display: flex;
@@ -181,7 +182,8 @@
     transform: translateX(-50%);
   }
   .header__logo {
-    width: 250px;
+    width: 170px;
+    height: 100%;
   }
   /* -------------------------------------------- Rigth ---------------------------------- */
   .header__containerList {
@@ -189,7 +191,7 @@
     gap: 6px;
   }
   .header__togleMenu__links {
-    font-size: 19px;
+    font-size: 17px;
     color: #003b6f;
   }
 }
