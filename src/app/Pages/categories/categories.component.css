@@ -61,4 +61,21 @@
     gap: 9px;
   }
 }
+/*  --------------------- Tablet ------------------------------ */
+@media (min-width: 1024px) {
+  .categories__containerlistCategory {
+    margin: 25px;
+  }
+  .categories__containerSelcet {
+    width: 100%;
+    padding: 9px;
+  }
+  .categories__form {
+    gap: 12px;
+  }
+  .categories__containerInput {
+    align-items: center;
+    gap: 9px;
+  }
+}
 
