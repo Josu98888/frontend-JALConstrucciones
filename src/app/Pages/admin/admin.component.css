@@ -108,3 +108,23 @@
     height: 40px;
   }
 }
+/*  --------------------- Laptop ------------------------------ */
+@media (min-width: 1024px) {
+  .admin__container {
+    width: 210vh;
+  }
+  /*  ---------------------- top ------------------------ */
+  .admin__containerAvatar {
+    width: 100vh;
+  }
+  /*  --------------------- bottom ----------------------- */
+  .admin__containerForm {
+    width: 120vh;
+  }
+  .admin__containerInput {
+    width: 70%;
+  }
+  .admin__btn {
+    width: 15%;
+  }
+}
