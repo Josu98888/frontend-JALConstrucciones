@@ -1,9 +1,18 @@
-.projectsPage {
-    width: 100vh;
+/*  ------------------------ Mobile ---------------- */
+@media (min-width: 0) {
+    .projectsPage {
+        width: 100vh;
+    }
 }
-.projectsPage__container {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*  ------------------------ Mobile ---------------- */
+@media (min-width: 1024px) {
+    .projectsPage {
+        width: 210vh;
+    }
+    .projectsPage__container {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
