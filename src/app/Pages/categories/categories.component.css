@@ -61,21 +61,19 @@
     gap: 9px;
   }
 }
-/*  --------------------- Tablet ------------------------------ */
+/*  --------------------- Laptop ------------------------------ */
 @media (min-width: 1024px) {
+  .categories__container {
+    width: 210vh;
+  }
   .categories__containerlistCategory {
     margin: 25px;
   }
   .categories__containerSelcet {
-    width: 100%;
-    padding: 9px;
+    width: 100vh;
   }
   .categories__form {
-    gap: 12px;
-  }
-  .categories__containerInput {
-    align-items: center;
-    gap: 9px;
+    gap: 4px;
   }
 }
 
