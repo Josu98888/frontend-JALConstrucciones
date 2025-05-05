@@ -10,10 +10,22 @@
                     <label class="admin__label" for="">Nombre</label>
                     <input class="admin__input" type="text" formControlName="name">
                 </div>
+                <ng-container *ngIf="formUpdateUser.get('name')?.touched">
+                    <!-- Si el campo está vacío (requerido) -->
+                    <div *ngIf="formUpdateUser.get('name')?.hasError('required')" class="admin__containerError">
+                        <p class="admin__msjError">El nombre es requerido</p>
+                    </div>
+                </ng-container>
                 <div class="admin__containerInput">
                     <label class="admin__label" for="">Apellido</label>
                     <input class="admin__input" type="text" formControlName="lastname">
                 </div>
+                <ng-container *ngIf="formUpdateUser.get('lastname')?.touched">
+                    <!-- Si el campo está vacío (requerido) -->
+                    <div *ngIf="formUpdateUser.get('lastname')?.hasError('required')" class="admin__containerError">
+                        <p class="admin__msjError">El apellido es requerido</p>
+                    </div>
+                </ng-container>
                 <div class="admin__containerInput">
                     <img *ngIf="identity && !imagePreview" class="admin__avatar" src="{{url+ 'user/avatar/'+ identity.image}}" alt="avatar">
                     <img *ngIf="imagePreview" class="admin__avatar" src="{{imagePreview}}" alt="avatar">
@@ -26,6 +38,12 @@
                     <label class="admin__label" for="">email</label>
                     <input class="admin__input" type="email" formControlName="email">
                 </div>
+                <ng-container *ngIf="formUpdateUser.get('email')?.touched">
+                    <!-- Si el campo está vacío (requerido) -->
+                    <div *ngIf="formUpdateUser.get('email')?.hasError('required')" class="admin__containerError">
+                        <p class="admin__msjError">El email es requerido</p>
+                    </div>
+                </ng-container>
                 <button class="admin__btn" (click)="onSubmit()">Guardar</button>
             </form>
         </div>

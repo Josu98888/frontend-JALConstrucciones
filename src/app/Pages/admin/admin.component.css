@@ -70,6 +70,16 @@
     width: 30%;
     height: 30px;
   }
+    /* --------- Msj Errors --------- */
+    .admin__containerError {
+      align-self: center;
+      margin: 0;
+    }
+    .admin__msjError {
+      color: red;
+      text-align: center;
+      font-size: 12px;
+    }
 }
 /*  --------------------- Tablet ------------------------------ */
 @media (min-width: 768px) {
