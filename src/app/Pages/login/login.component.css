@@ -47,6 +47,16 @@
     padding: 10px;
     color: #003b6f;
   }
+  /* --------- Msj Errors --------- */
+  .login__containerError {
+    align-self: center;
+    margin: 0;
+}
+.login__msjError {
+    color: red;
+    text-align: center;
+    font-size: 12px;
+}
 }
 /*  --------------------- Tablet ------------------------------ */
 @media (min-width: 768px) {

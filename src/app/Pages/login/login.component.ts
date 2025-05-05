@@ -5,10 +5,11 @@ import { environment } from '../../../environments/environment.development';
 import { User } from '../../Models/user';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-login',
-  imports: [TitleComponent, ReactiveFormsModule],
+  imports: [TitleComponent, ReactiveFormsModule, NgIf],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })

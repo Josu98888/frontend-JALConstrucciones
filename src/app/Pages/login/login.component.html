@@ -6,11 +6,28 @@
             <input class="login__input" type="email" placeholder="Email" formControlName="email">
             <div class="login__containerMsjError"></div>
         </div>
+        <ng-container *ngIf="loginForm.get('email')?.touched">
+            <!-- Si el campo está vacío (requerido) -->
+            <div *ngIf="loginForm.get('email')?.hasError('required')" class="login__containerError">
+                <p class="login__msjError">El Email es requerido</p>
+            </div>
+            <!-- Si el email no tiene el formato correcto -->
+            <div *ngIf="loginForm.get('email')?.hasError('email') && !loginForm.get('email')?.hasError('required')"
+                class="login__containerError">
+                <p class="login__msjError">El Email debe ser válido</p>
+            </div>
+        </ng-container>
         <div class="login__containerInput">
             <label class="login__label">contraseña</label>
             <input class="login__input" type="password" placeholder="contraseña" formControlName="password">
             <div class="login__containerMsjError"></div>
         </div>
+        <ng-container *ngIf="loginForm.get('password')?.touched">
+            <!-- Si el campo está vacío (requerido) -->
+            <div *ngIf="loginForm.get('password')?.hasError('required')" class="login__containerError">
+                <p class="login__msjError">La contraseña es requerida</p>
+            </div>
+        </ng-container>
         <div class="login__contanerBtn">
             <button class="login__btn" (click)="onSubmit()">Enviar</button>
         </div>
