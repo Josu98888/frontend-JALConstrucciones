@@ -58,15 +58,20 @@ export class AdminComponent {
             this.identity.image = response.user.image;
           }
           this._userService.saveSession(this.identity, this.token);
-          this._router.navigate(['admin']).then(() => {
-            window.location.reload();
-          });
+          setTimeout(() => {
+            this._router.navigate(['admin']).then(() => {
+              window.location.reload();
+            });
+          }, 3000);
         } else {
           this.status = 'error';
         }
       },
       (error) => {
         this.status = 'error';
+        if (error.error?.errors?.email) {
+          this.formUpdateUser.get('email')?.setErrors({ emailTaken: true });
+        }
         console.log(error);
       }
     );

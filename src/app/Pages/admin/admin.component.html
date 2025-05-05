@@ -43,8 +43,15 @@
                     <div *ngIf="formUpdateUser.get('email')?.hasError('required')" class="admin__containerError">
                         <p class="admin__msjError">El email es requerido</p>
                     </div>
+                    <!-- Si el email ya está utilizado -->
+                    <div *ngIf="formUpdateUser.get('email')?.hasError('emailTaken')  && !formUpdateUser.get('email')?.hasError('required')" class="admin__containerError">
+                        <p class="admin__msjError">El email que usó ya fue utilizado.</p>
+                    </div>
                 </ng-container>
                 <button class="admin__btn" (click)="onSubmit()">Guardar</button>
+                <div *ngIf="status == 'success'" class="admin__containerMessage">
+                    <p class="admin__message">Cambio exitoso!!!</p>
+                </div>
             </form>
         </div>
     </div>

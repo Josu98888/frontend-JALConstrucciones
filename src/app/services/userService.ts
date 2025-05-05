@@ -81,7 +81,12 @@ export class UserService {
 
     return this._http.post(this.url + 'user/update', data, {
       headers: headers,
-    });
+    }).pipe(
+      catchError((error: HttpErrorResponse) => {
+        // manejo de errores con catchError
+        return throwError(() => error); // reenvío el error para manejarlo en el componente
+      })
+    );
   }
 
   clearSession(): void {
