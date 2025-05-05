@@ -16,6 +16,11 @@
                 class="login__containerError">
                 <p class="login__msjError">El Email debe ser válido</p>
             </div>
+            <!-- Si el email no existe -->
+            <div *ngIf="loginForm.get('email')?.hasError('emailTaken') && !loginForm.get('email')?.hasError('required') && !loginForm.get('email')?.hasError('email')"
+                class="login__containerError">
+                <p class="login__msjError">El email no existe</p>
+            </div>
         </ng-container>
         <div class="login__containerInput">
             <label class="login__label">contraseña</label>
@@ -27,11 +32,22 @@
             <div *ngIf="loginForm.get('password')?.hasError('required')" class="login__containerError">
                 <p class="login__msjError">La contraseña es requerida</p>
             </div>
+            <!-- Si el password tiene menos de 8 caracteres -->
+            <div *ngIf="loginForm.get('password')?.hasError('minlength') && !loginForm.get('password')?.hasError('required')"
+                class="login__containerError">
+                <p class="login__msjError">La contraseña debe tener minimo 8 digitos</p>
+            </div>
+            <!-- Si el password es incorrecto -->
+            <div *ngIf="loginForm.get('password')?.hasError('invalidPassword') && !loginForm.get('password')?.hasError('required')"
+                class="login__containerError">
+                <p class="login__msjError">La contraseña es incorrecta</p>
+            </div>
         </ng-container>
         <div class="login__contanerBtn">
             <button class="login__btn" (click)="onSubmit()">Enviar</button>
         </div>
-        <div class="login__containerMsjError">
+        <div *ngIf="status == 'success'" class="login__containerMessage">
+            <p class="login__message">Inicio de sesión exitoso!!!</p>
         </div>
     </form>
 </div>

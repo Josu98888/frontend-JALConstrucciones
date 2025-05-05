@@ -26,7 +26,7 @@ export class LoginComponent {
   ngOnInit() {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', Validators.required),
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
     });
   }
 
@@ -41,15 +41,17 @@ export class LoginComponent {
         if (response.status === 'success') {
           this._userService.saveSession(response.user, response.token);
           this.status = 'success';
-          this._router.navigate(['']).then(() => {
-            window.location.reload();
-          });
+          setTimeout(() => {
+            this._router.navigate(['']).then(() => {
+              window.location.reload();
+            });
+          }, 3000);
         } else {
           this.status = 'error';
         }
       },
       error: (err) => {
-        console.error(err);
+        // console.error(err);
         this.status = 'error';
         if (err.error?.errors?.email) {
           this.loginForm.get('email')?.setErrors({ emailTaken: true });
