@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    url: 'http://jalconstrucciones-production.up.railway.app',
+    url: 'https://jalconstrucciones-production.up.railway.app/api',
 };
