@@ -31,6 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
   }
   .cardService__title {
     padding-inline: 2px;
@@ -39,6 +40,7 @@
     display: flex;
     justify-content: center;
     color: #003b6f;
+    height: auto;
   }
   .cardService__description {
     font-size: 18px;
@@ -62,11 +64,12 @@
     object-fit:fill;
   }
   .cardService__description {
+    height: 100%;
     font-size: 20px;
   }
   .cardService__containerText, .cardService__containerDescription {
-    padding: 0;
+    padding: 8px;
     margin: 0;
-    height: 70px;
+    height: 90px;
   }
 }

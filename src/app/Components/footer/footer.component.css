@@ -67,7 +67,8 @@
   }
   /*  ------------------- Left ----------------- */
   .footer__logo {
-    width: 170px;
+    width: 100px;
+    height: 90px;
   }
   .footer__text {
     font-size: 16px;

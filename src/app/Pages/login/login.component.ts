@@ -36,7 +36,7 @@ export class LoginComponent {
       password: this.loginForm.value.password,
     };
 
-    this._userService.login(user).subscribe({
+    this._userService.login(user, true).subscribe({
       next: (response) => {
         if (response.status === 'success') {
           this._userService.saveSession(response.user, response.token);

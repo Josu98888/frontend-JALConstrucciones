@@ -35,7 +35,7 @@
   }
   .header__logo {
     width: 230px;
-    height: 100px;
+    height: 80px;
     object-fit: cover;
   }
   /* ---------------- TogleMenu ------------- */
@@ -182,7 +182,7 @@
     transform: translateX(-50%);
   }
   .header__logo {
-    width: 170px;
+    width: 270px;
     height: 100%;
   }
   /* -------------------------------------------- Rigth ---------------------------------- */
