@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    url: 'http://jalconstrucciones.com/api/',
+    url: 'http://jalconstrucciones.com/api/', 
 };
