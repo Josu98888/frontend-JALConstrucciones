@@ -35,6 +35,8 @@ export class AdminComponent {
       name: new FormControl(this.identity.name, Validators.required),
       lastname: new FormControl(this.identity.lastname, Validators.required),
       email: new FormControl(this.identity.email, [Validators.required, Validators.email]),
+      current_password: new FormControl('', [Validators.minLength(8)]),
+      password: new FormControl('', [Validators.minLength(8)]),
     });
   }
 
@@ -44,6 +46,8 @@ export class AdminComponent {
     formData.append('name', this.formUpdateUser.get('name').value);
     formData.append('lastname', this.formUpdateUser.get('lastname').value);
     formData.append('email', this.formUpdateUser.get('email').value);
+    formData.append('current_password', this.formUpdateUser.get('current_password').value);
+    formData.append('password', this.formUpdateUser.get('password').value);
   
     if (this.fileAvatar) {
       formData.append('image', this.fileAvatar);
@@ -71,6 +75,9 @@ export class AdminComponent {
         this.status = 'error';
         if (error.error?.errors?.email) {
           this.formUpdateUser.get('email')?.setErrors({ emailTaken: true });
+        }
+        if (error.error.message.includes('La contraseña actual no es correcta.')) {
+          this.formUpdateUser.get('current_password')?.setErrors({ incorrectPassword: true });
         }
         console.log(error);
       }

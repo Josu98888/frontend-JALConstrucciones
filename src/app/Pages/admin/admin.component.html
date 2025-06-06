@@ -48,6 +48,32 @@
                         <p class="admin__msjError">El email que usó ya fue utilizado.</p>
                     </div>
                 </ng-container>
+                <!-- current password -->
+                <div class="admin__containerInput">
+                    <label class="admin__label" for="">Contraseña actual</label>
+                    <input class="admin__input" type="password" formControlName="current_password">
+                </div>
+                <ng-container *ngIf="formUpdateUser.get('current_password')?.touched">
+                    <!-- Si el campo está vacío (requerido) -->
+                    <div *ngIf="formUpdateUser.get('current_password')?.hasError('minlength')" class="admin__containerError">
+                        <p class="admin__msjError">La contraseña debe tener minimo 8 caracteres.</p>
+                    </div>
+                    <!-- Si el email ya está utilizado -->
+                    <div *ngIf="formUpdateUser.get('current_password')?.hasError('incorrectPassword')  && !formUpdateUser.get('current_password')?.hasError('minlength')" class="admin__containerError">
+                        <p class="admin__msjError">La contraseña es incorrecta.</p>
+                    </div>
+                </ng-container>
+                <!-- new password -->
+                <div class="admin__containerInput">
+                    <label class="admin__label" for="">Contraseña nueva</label>
+                    <input class="admin__input" type="password" formControlName="password">
+                </div>
+                <ng-container *ngIf="formUpdateUser.get('password')?.touched">
+                    <!-- Si el campo está vacío (requerido) -->
+                    <div *ngIf="formUpdateUser.get('password')?.hasError('minlength')" class="admin__containerError">
+                        <p class="admin__msjError">La contraseña debe tener minimo 8 caracteres.</p>
+                    </div>
+                </ng-container>
                 <button class="admin__btn" (click)="onSubmit()">Guardar</button>
                 <div *ngIf="status == 'success'" class="admin__containerMessage">
                     <p class="admin__message">Cambio exitoso!!!</p>
